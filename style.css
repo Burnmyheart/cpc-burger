@@ -43,8 +43,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
+  gap: 268px;
 }
-
+.burger__menu--icon {
+  position: absolute;
+  left: 0;
+}
 .burger__menu--top {
   margin: 0;
   padding: 16px 24px 0 24px;
@@ -58,10 +62,6 @@ body {
 }
 .burger__menu--left {
   gap: 16px;
-}
-
-nav {
-  display: block;
 }
 
 .burger__menu--contacts {
@@ -83,7 +83,7 @@ nav {
   flex-direction: column;
   gap: 32px;
   margin: 0;
-  padding: 0;
+  padding-left: 24px;
 }
 
 ul {
@@ -125,6 +125,10 @@ ul {
   font-weight: 500;
   transition: filter 0.3s, opacity 0.3s, color 0.3s;
 }
+.burger__menu--link--activ {
+  color: #7e7e82;
+  text-decoration: none;
+}
 button {
   padding: 0;
   background: none;
@@ -132,22 +136,16 @@ button {
   cursor: pointer;
 }
 
-.burger__menu--icon {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(-5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.burger__menu--item:hover .burger__menu--icon {
+/* .burger__menu--item:hover .burger__menu--icon {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
-}
+} */
 
-.burger__menu--link:hover {
+/* .burger__menu--link:hover {
   color: #7e7e82;
-}
+} */
+
 .burger__menu--main {
   display: flex;
   flex-direction: column;
@@ -159,7 +157,7 @@ button {
   gap: 40px;
 }
 
-.burger__menu--button--activ {
+.burger__menu--item--activ {
   color: #7e7e82;
 }
 .burger__menu--icons {
@@ -181,4 +179,18 @@ button {
   font-weight: 700;
   color: #1b1c21;
   text-decoration: none;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.icon-button:active {
+  animation: blink 0.3s ease-in-out;
 }
