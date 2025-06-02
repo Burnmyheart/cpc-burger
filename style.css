@@ -45,10 +45,7 @@ body {
   overflow-y: auto;
   gap: 32px;
 }
-.burger__menu--icon {
-  position: absolute;
-  left: 0;
-}
+
 .burger__menu--top {
   margin: 0;
   padding: 23px 24px 0 24px;
@@ -83,7 +80,7 @@ body {
   flex-direction: column;
   gap: 32px;
   margin: 0;
-  padding-left: 24px;
+  padding: 0;
 }
 
 ul {
@@ -94,25 +91,25 @@ ul {
   display: flex;
   align-items: center;
   gap: 24px;
-  font-family: "TT Lakes Neue", sans-serif;
+  font-family: "TT Lakes", sans-serif;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: -0.2px;
 }
 
 .burger__menu--button {
-  font-family: "TT Lakes Neue", sans-serif;
+  font-family: "TT Lakes", sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
   border: none;
   background-color: white;
-  color: rgba(27, 28, 33, 1);
+  color: #1b1c21;
 }
 .burger__menu--item {
   display: flex;
   align-items: center;
   gap: 24px;
-  font-family: "TT Lakes Neue", sans-serif;
+  font-family: "TT Lakes ", sans-serif;
   font-weight: 300;
   font-size: 16px;
   letter-spacing: -0.2px;
@@ -136,15 +133,15 @@ button {
   cursor: pointer;
 }
 
-/* .burger__menu--item:hover .burger__menu--icon {
-  opacity: 1;
+.burger__menu--icon {
+  opacity: 0;
   visibility: visible;
   transform: translateX(0);
-} */
+}
 
-/* .burger__menu--link:hover {
+.burger__menu--link:hover {
   color: #7e7e82;
-} */
+}
 
 .burger__menu--main {
   display: flex;
@@ -165,7 +162,13 @@ button {
   flex-direction: column;
   gap: 16px;
 }
-
+.burger__menu--button--active {
+  color: #7e7e82;
+}
+.burger__menu__top--footer {
+  display: flex;
+  gap: 16px;
+}
 .burger__menu--mail {
   text-decoration: none;
   color: #1b1c21;
