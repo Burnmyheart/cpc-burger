@@ -43,7 +43,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
-  gap: 268px;
+  gap: 32px;
 }
 .burger__menu--icon {
   position: absolute;
@@ -51,7 +51,7 @@ body {
 }
 .burger__menu--top {
   margin: 0;
-  padding: 16px 24px 0 24px;
+  padding: 23px 24px 0 24px;
 }
 .burger__menu--top,
 .burger__menu--left {
@@ -68,7 +68,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 24px;
-  gap: 16px;
+  gap: 12px;
 }
 
 .burger__menu--languages {
@@ -162,6 +162,7 @@ button {
 }
 .burger__menu--icons {
   display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
